@@ -17,6 +17,7 @@
 		CA3DB7AA244EC2870006BAD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7A5244EC2870006BAD5 /* HomeViewController.m */; };
 		CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */; };
 		CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */; };
+		CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
 		CA3DB7B2244EC5FB0006BAD5 /* TestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
 		CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUtil.m; sourceTree = "<group>"; };
+		CA3DB7B5244ECEA40006BAD5 /* SelectSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectSort.h; sourceTree = "<group>"; };
+		CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 			children = (
 				CA3DB7AE244EC4480006BAD5 /* BubbleSort.h */,
 				CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */,
+				CA3DB7B5244ECEA40006BAD5 /* SelectSort.h */,
+				CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */,
 			);
 			path = sort;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */,
 				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
+				CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */,
 				CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */,
 				CA3DB77F244EC24F0006BAD5 /* main.m in Sources */,
 				CA3DB7A9244EC2870006BAD5 /* HomeDataSource.m in Sources */,

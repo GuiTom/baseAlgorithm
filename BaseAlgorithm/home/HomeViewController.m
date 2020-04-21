@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeDataSource.h"
 #import "BubbleSort.h"
+#import "SelectSort.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -74,6 +75,8 @@ static NSString *cellId = @"cellID";
     if([header isEqualToString:@"排序"]){
         if([title isEqualToString:@"冒泡排序"]){
             [[BubbleSort new] test];
+        }else  if([title isEqualToString:@"选择排序"]){
+            [[SelectSort new] test];
         }
     }
     
