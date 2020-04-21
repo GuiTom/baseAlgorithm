@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeDataSource.h"
-
+#import "BubbleSort.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -71,7 +71,10 @@ static NSString *cellId = @"cellID";
    NSDictionary *cellData = cellDatas[indexPath.row];
    NSString *title = cellData[@"title"];
    NSString *header = sectiondata[@"header"];
-    if([header isEqualToString:@"block相关"]){
+    if([header isEqualToString:@"排序"]){
+        if([title isEqualToString:@"冒泡排序"]){
+            [[BubbleSort new] test];
+        }
     }
     
 }

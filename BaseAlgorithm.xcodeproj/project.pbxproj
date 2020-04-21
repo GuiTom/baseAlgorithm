@@ -15,6 +15,8 @@
 		CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7A2244EC2870006BAD5 /* AppDelegate.m */; };
 		CA3DB7A9244EC2870006BAD5 /* HomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7A4244EC2870006BAD5 /* HomeDataSource.m */; };
 		CA3DB7AA244EC2870006BAD5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7A5244EC2870006BAD5 /* HomeViewController.m */; };
+		CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */; };
+		CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		CA3DB7A5244EC2870006BAD5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CA3DB7A6244EC2870006BAD5 /* HomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDataSource.h; sourceTree = "<group>"; };
 		CA3DB7A7244EC2870006BAD5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		CA3DB7AE244EC4480006BAD5 /* BubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		CA3DB7B2244EC5FB0006BAD5 /* TestUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,10 @@
 		CA3DB76B244EC24C0006BAD5 /* BaseAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				CA3DB7B1244EC5E60006BAD5 /* utils */,
+				CA3DB7AD244EC4290006BAD5 /* stringSearch */,
+				CA3DB7AC244EC4210006BAD5 /* binaryTree */,
+				CA3DB7AB244EC4180006BAD5 /* sort */,
 				CA3DB7A1244EC2870006BAD5 /* AppDelegate.h */,
 				CA3DB7A2244EC2870006BAD5 /* AppDelegate.m */,
 				CA3DB7A3244EC2870006BAD5 /* home */,
@@ -134,12 +144,44 @@
 		CA3DB7A3244EC2870006BAD5 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				CA3DB7A4244EC2870006BAD5 /* HomeDataSource.m */,
 				CA3DB7A6244EC2870006BAD5 /* HomeDataSource.h */,
+				CA3DB7A4244EC2870006BAD5 /* HomeDataSource.m */,
 				CA3DB7A7244EC2870006BAD5 /* HomeViewController.h */,
 				CA3DB7A5244EC2870006BAD5 /* HomeViewController.m */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		CA3DB7AB244EC4180006BAD5 /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DB7AE244EC4480006BAD5 /* BubbleSort.h */,
+				CA3DB7AF244EC4480006BAD5 /* BubbleSort.m */,
+			);
+			path = sort;
+			sourceTree = "<group>";
+		};
+		CA3DB7AC244EC4210006BAD5 /* binaryTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = binaryTree;
+			sourceTree = "<group>";
+		};
+		CA3DB7AD244EC4290006BAD5 /* stringSearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stringSearch;
+			sourceTree = "<group>";
+		};
+		CA3DB7B1244EC5E60006BAD5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DB7B2244EC5FB0006BAD5 /* TestUtil.h */,
+				CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */,
+				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
+				CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */,
 				CA3DB77F244EC24F0006BAD5 /* main.m in Sources */,
 				CA3DB7A9244EC2870006BAD5 /* HomeDataSource.m in Sources */,
 				CA3DB7AA244EC2870006BAD5 /* HomeViewController.m in Sources */,
