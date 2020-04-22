@@ -29,7 +29,6 @@
             arr[i] = arr[min];
             arr[min] = tmp;
         }
-        
     }
 }
 @end
