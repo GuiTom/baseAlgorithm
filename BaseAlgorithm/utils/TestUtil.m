@@ -27,4 +27,12 @@
         printf(" %d",array[i]);
     }
 }
++(void)execTest:(void(^)(void))block{
+    NSDate *date = [NSDate date];
+    if(block){
+        block();
+    }
+    NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:date];
+    NSLog(@"用时 %f ms",interval*1000);
+}
 @end

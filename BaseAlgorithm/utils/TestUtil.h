@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TestUtil : NSObject
 +(int *)createRandomNumbers:(int)length;
 +(void)printArray:(int *)array length:(int)length;
++(void)execTest:(void(^)(void))block;
 @end
 
 NS_ASSUME_NONNULL_END

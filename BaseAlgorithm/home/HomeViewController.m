@@ -11,6 +11,7 @@
 #import "BubbleSort.h"
 #import "SelectSort.h"
 #import "MergeSort.h"
+
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -80,6 +81,7 @@ static NSString *cellId = @"cellID";
             [[SelectSort new] test];
         }else if([title isEqualToString:@"归并排序"]){
             [[MergeSort new] test];
+         
         }
     }
     
