@@ -19,6 +19,7 @@
 		CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B3244EC5FB0006BAD5 /* TestUtil.m */; };
 		CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */; };
 		CA3DB7BA244ED25B0006BAD5 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB7B9244ED25B0006BAD5 /* MergeSort.m */; };
+		CAEDD042245922EA00984B1B /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD041245922EA00984B1B /* QuickSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectSort.m; sourceTree = "<group>"; };
 		CA3DB7B8244ED25B0006BAD5 /* MergeSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
 		CA3DB7B9244ED25B0006BAD5 /* MergeSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeSort.m; sourceTree = "<group>"; };
+		CAEDD040245922EA00984B1B /* QuickSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		CAEDD041245922EA00984B1B /* QuickSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */,
 				CA3DB7B8244ED25B0006BAD5 /* MergeSort.h */,
 				CA3DB7B9244ED25B0006BAD5 /* MergeSort.m */,
+				CAEDD040245922EA00984B1B /* QuickSort.h */,
+				CAEDD041245922EA00984B1B /* QuickSort.m */,
 			);
 			path = sort;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
 				CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */,
 				CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */,
+				CAEDD042245922EA00984B1B /* QuickSort.m in Sources */,
 				CA3DB77F244EC24F0006BAD5 /* main.m in Sources */,
 				CA3DB7A9244EC2870006BAD5 /* HomeDataSource.m in Sources */,
 				CA3DB7BA244ED25B0006BAD5 /* MergeSort.m in Sources */,
