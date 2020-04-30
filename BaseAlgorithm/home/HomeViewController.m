@@ -13,7 +13,7 @@
 #import "MergeSort.h"
 
 #import "QuickSort.h"
-
+#import "KMPSearch.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -87,7 +87,12 @@ static NSString *cellId = @"cellID";
         }else if([title isEqualToString:@"快速排序"]){
             [[QuickSort new] test];
         }
+    }else  if([header isEqualToString:@"字符串查找"]){
+        if([title isEqualToString:@"kmp"]){
+            [[KMPSearch new] test];
+        }
     }
+    
     
 }
 
