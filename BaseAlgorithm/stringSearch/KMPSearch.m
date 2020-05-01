@@ -10,8 +10,8 @@
 
 @implementation KMPSearch
 -(void)test{
-    char *stringTOSearch = "assbdecabacabfd";
-    char *subStr = "dec";
+    char *stringTOSearch = "axssbdecabdecacabfd";
+    char *subStr = "decabdec";
     int* next = getNext(subStr);
     NSInteger len = strlen(subStr);
     for (int i=0; i<len; i++) {
@@ -25,20 +25,24 @@ int search(char *mainStr,char *subStr){
     NSInteger lenSub = strlen(subStr);
     int* next = getNext(subStr);
     int index = -1;
-    for (int i=0,k=0; i<lenMain; i++) {
+    for (int i=0,k=0; i<lenMain;) {
         if(mainStr[i]==subStr[k]){
             k++;
+            
+            if(k>=lenSub){
+                index = i+1 - (int)lenSub;
+            }
+            i++;
         }else {//失配
-            int j = next[k-1];
-            if(k>0&&j>0){
-                k = j;
-            }else {
-                k = 0;
+            
+            if(k>0)
+                k = next[k-1];
+            else {
+                i++;
             }
         }
-        if(k>=lenSub){
-            index = i+1 - (int)lenSub;
-        }
+        
+    
         
     }
     return index;
