@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2E131D24542F2D008BBF28 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E131C24542F2D008BBF28 /* ShellSort.m */; };
 		CA3DB779244EC24F0006BAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3DB778244EC24F0006BAD5 /* Assets.xcassets */; };
 		CA3DB77C244EC24F0006BAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3DB77A244EC24F0006BAD5 /* LaunchScreen.storyboard */; };
 		CA3DB77F244EC24F0006BAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB77E244EC24F0006BAD5 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A2E131B24542F2D008BBF28 /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
+		2A2E131C24542F2D008BBF28 /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
 		CA3DB769244EC24C0006BAD5 /* BaseAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3DB778244EC24F0006BAD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA3DB77B244EC24F0006BAD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */,
 				CA3DB7B8244ED25B0006BAD5 /* MergeSort.h */,
 				CA3DB7B9244ED25B0006BAD5 /* MergeSort.m */,
+				2A2E131B24542F2D008BBF28 /* ShellSort.h */,
+				2A2E131C24542F2D008BBF28 /* ShellSort.m */,
 			);
 			path = sort;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2E131D24542F2D008BBF28 /* ShellSort.m in Sources */,
 				CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */,
 				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
 				CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */,

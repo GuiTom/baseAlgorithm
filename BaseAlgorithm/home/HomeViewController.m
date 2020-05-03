@@ -82,6 +82,9 @@ static NSString *cellId = @"cellID";
         }else if([title isEqualToString:@"归并排序"]){
             [[MergeSort new] test];
          
+        }else if([title isEqualToString:@"希尔排序"]){
+            [[MergeSort new] test];
+            
         }
     }
     
