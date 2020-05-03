@@ -26,6 +26,7 @@
         }
         printf(" %d",array[i]);
     }
+    printf("\n");
 }
 +(void)execTest:(void(^)(void))block{
     NSDate *date = [NSDate date];

@@ -12,6 +12,9 @@
 #import "SelectSort.h"
 #import "MergeSort.h"
 
+#import "QuickSort.h"
+#import "KMPSearch.h"
+#import "HeapSort.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -81,12 +84,25 @@ static NSString *cellId = @"cellID";
             [[SelectSort new] test];
         }else if([title isEqualToString:@"归并排序"]){
             [[MergeSort new] test];
+<<<<<<< HEAD
          
         }else if([title isEqualToString:@"希尔排序"]){
             [[MergeSort new] test];
             
+=======
+
+        }else if([title isEqualToString:@"快速排序"]){
+            [[QuickSort new] test];
+        }else if([title isEqualToString:@"堆排序"]){
+            [[HeapSort new] test];
+        }
+    }else  if([header isEqualToString:@"字符串查找"]){
+        if([title isEqualToString:@"kmp"]){
+            [[KMPSearch new] test];
+>>>>>>> 25f6b7f00c4e604afc4836a9f9a29b1a3206924e
         }
     }
+    
     
 }
 
