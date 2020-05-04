@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		2AA7F2EE245D916B00E1F0DA /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7F2ED245D916B00E1F0DA /* AVLTree.m */; };
+=======
+<<<<<<< HEAD
+		2A2E131D24542F2D008BBF28 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E131C24542F2D008BBF28 /* ShellSort.m */; };
+=======
+>>>>>>> 250000d6ba1469098f0b6269e9f47f6899010076
 		CA0CAF28245984FC00DC84C7 /* KMPSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAF27245984FC00DC84C7 /* KMPSearch.m */; };
 		CA11CA3D2459323900E99C8B /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA11CA3C2459323900E99C8B /* HeapSort.m */; };
+>>>>>>> 25f6b7f00c4e604afc4836a9f9a29b1a3206924e
 		CA3DB779244EC24F0006BAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3DB778244EC24F0006BAD5 /* Assets.xcassets */; };
 		CA3DB77C244EC24F0006BAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3DB77A244EC24F0006BAD5 /* LaunchScreen.storyboard */; };
 		CA3DB77F244EC24F0006BAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DB77E244EC24F0006BAD5 /* main.m */; };
@@ -43,12 +50,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		2AA7F2EC245D916B00E1F0DA /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
 		2AA7F2ED245D916B00E1F0DA /* AVLTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVLTree.m; sourceTree = "<group>"; };
+=======
+<<<<<<< HEAD
+		2A2E131B24542F2D008BBF28 /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
+		2A2E131C24542F2D008BBF28 /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
+=======
+>>>>>>> 250000d6ba1469098f0b6269e9f47f6899010076
 		CA0CAF26245984FB00DC84C7 /* KMPSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMPSearch.h; sourceTree = "<group>"; };
 		CA0CAF27245984FC00DC84C7 /* KMPSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMPSearch.m; sourceTree = "<group>"; };
 		CA11CA3B2459323900E99C8B /* HeapSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
 		CA11CA3C2459323900E99C8B /* HeapSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
+>>>>>>> 25f6b7f00c4e604afc4836a9f9a29b1a3206924e
 		CA3DB769244EC24C0006BAD5 /* BaseAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3DB778244EC24F0006BAD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA3DB77B244EC24F0006BAD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -188,10 +203,15 @@
 				CA3DB7B6244ECEA40006BAD5 /* SelectSort.m */,
 				CA3DB7B8244ED25B0006BAD5 /* MergeSort.h */,
 				CA3DB7B9244ED25B0006BAD5 /* MergeSort.m */,
+<<<<<<< HEAD
+				2A2E131B24542F2D008BBF28 /* ShellSort.h */,
+				2A2E131C24542F2D008BBF28 /* ShellSort.m */,
+=======
 				CAEDD040245922EA00984B1B /* QuickSort.h */,
 				CAEDD041245922EA00984B1B /* QuickSort.m */,
 				CA11CA3B2459323900E99C8B /* HeapSort.h */,
 				CA11CA3C2459323900E99C8B /* HeapSort.m */,
+>>>>>>> 25f6b7f00c4e604afc4836a9f9a29b1a3206924e
 			);
 			path = sort;
 			sourceTree = "<group>";
@@ -343,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2E131D24542F2D008BBF28 /* ShellSort.m in Sources */,
 				CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */,
 				CA11CA3D2459323900E99C8B /* HeapSort.m in Sources */,
 				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
