@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AA7F2EE245D916B00E1F0DA /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7F2ED245D916B00E1F0DA /* AVLTree.m */; };
 		CA0CAF28245984FC00DC84C7 /* KMPSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAF27245984FC00DC84C7 /* KMPSearch.m */; };
 		CA11CA3D2459323900E99C8B /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CA11CA3C2459323900E99C8B /* HeapSort.m */; };
 		CA3DB779244EC24F0006BAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3DB778244EC24F0006BAD5 /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AA7F2EC245D916B00E1F0DA /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
+		2AA7F2ED245D916B00E1F0DA /* AVLTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVLTree.m; sourceTree = "<group>"; };
 		CA0CAF26245984FB00DC84C7 /* KMPSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMPSearch.h; sourceTree = "<group>"; };
 		CA0CAF27245984FC00DC84C7 /* KMPSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMPSearch.m; sourceTree = "<group>"; };
 		CA11CA3B2459323900E99C8B /* HeapSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
@@ -100,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AA7F2EB245D915B00E1F0DA /* binaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				2AA7F2EC245D916B00E1F0DA /* AVLTree.h */,
+				2AA7F2ED245D916B00E1F0DA /* AVLTree.m */,
+			);
+			path = binaryTree;
+			sourceTree = "<group>";
+		};
 		CA3DB760244EC24C0006BAD5 = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +135,9 @@
 		CA3DB76B244EC24C0006BAD5 /* BaseAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				2AA7F2EB245D915B00E1F0DA /* binaryTree */,
 				CA3DB7B1244EC5E60006BAD5 /* utils */,
 				CA3DB7AD244EC4290006BAD5 /* stringSearch */,
-				CA3DB7AC244EC4210006BAD5 /* binaryTree */,
 				CA3DB7AB244EC4180006BAD5 /* sort */,
 				CA3DB7A1244EC2870006BAD5 /* AppDelegate.h */,
 				CA3DB7A2244EC2870006BAD5 /* AppDelegate.m */,
@@ -182,13 +194,6 @@
 				CA11CA3C2459323900E99C8B /* HeapSort.m */,
 			);
 			path = sort;
-			sourceTree = "<group>";
-		};
-		CA3DB7AC244EC4210006BAD5 /* binaryTree */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = binaryTree;
 			sourceTree = "<group>";
 		};
 		CA3DB7AD244EC4290006BAD5 /* stringSearch */ = {
@@ -341,6 +346,7 @@
 				CA3DB7A8244EC2870006BAD5 /* AppDelegate.m in Sources */,
 				CA11CA3D2459323900E99C8B /* HeapSort.m in Sources */,
 				CA3DB7B4244EC5FB0006BAD5 /* TestUtil.m in Sources */,
+				2AA7F2EE245D916B00E1F0DA /* AVLTree.m in Sources */,
 				CA3DB7B7244ECEA40006BAD5 /* SelectSort.m in Sources */,
 				CA3DB7B0244EC4480006BAD5 /* BubbleSort.m in Sources */,
 				CAEDD042245922EA00984B1B /* QuickSort.m in Sources */,

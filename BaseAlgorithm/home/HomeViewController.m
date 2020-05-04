@@ -11,10 +11,10 @@
 #import "BubbleSort.h"
 #import "SelectSort.h"
 #import "MergeSort.h"
-
 #import "QuickSort.h"
 #import "KMPSearch.h"
 #import "HeapSort.h"
+#import "AVLTree.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *table;
 @end
@@ -93,6 +93,10 @@ static NSString *cellId = @"cellID";
     }else  if([header isEqualToString:@"字符串查找"]){
         if([title isEqualToString:@"kmp"]){
             [[KMPSearch new] test];
+        }
+    }else  if([header isEqualToString:@"树"]){
+        if([title isEqualToString:@"AVL树"]){
+            [[AVLTree new] test];
         }
     }
     
