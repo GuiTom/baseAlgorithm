@@ -30,7 +30,7 @@ static int rightMaxDistance = 0;
 static int currentLevel = 0;
 static int maxLevel = 0;
 -(void)test{
-    int arr[] = {99,14,2,3,6,7,11,45,21,89,97,32,54,13};
+    int arr[] = {99,14,2,3,6,7,21,89,97,32,33,8};
     int len = sizeof(arr)/sizeof(*arr);
     root = NULL;
     for (int i=0;i<len;i++) {
@@ -39,11 +39,13 @@ static int maxLevel = 0;
         node->height = 1;
         node->distanceToRoot = 0;
         addNode(node);
-        
     }
-    
-    travelPreOrder(root);
     printNodeInLevel(root);
+    printf("\n-----------------------------\n");
+    removeByKey(3);
+    removeByKey(7);
+    printNodeInLevel(root);
+    
 }
 void travelPreOrder(Node*node){
     currentLevel++;
@@ -65,6 +67,27 @@ void travelPreOrder(Node*node){
         travelPreOrder(node->right);
     }
     currentLevel --;
+}
+int removeByKey(int key){
+    Node *node = root;
+    while(1){
+        if(node->key>key){
+            if(node->left){
+                node = node->left;
+            }else {
+                return -1;
+            }
+        }else if(node->key<key){
+            if(node->right){
+                node = node->right;
+            }else {
+                return -1;
+            }
+        }else {
+            removeNode(node);
+            return 0;
+        }
+    }
 }
 void addNode(Node *node){
     
@@ -96,33 +119,109 @@ void addNode(Node *node){
         }
     }
  
+    afterAdd(node);
+}
+void afterAdd(Node*node){
     //更新高度
     Node *p = node->parent;
     while(p){
-        p->height = getHeight(p);
-        p = p->parent;
-    }
-    Node *grandParent = parent->parent;//新添加节点的 grandParent 才有可能失衡
-    Node *child = NULL;//记住 grandParent 是其父母的左子节点还是右子节点，因为在旋转后可能不知道那个节点替换 grandParent 的位置
-    if(grandParent){
-        if(grandParent->parent){
-            if(grandParent==grandParent->parent->left){
-                child = grandParent->parent->left;
-            }else {
-                child = grandParent->parent->right;
-            }
+
+        int balanced = isBalanced(p);
+        if(balanced){//失去平衡
+            
+            p->height = getHeight(p);
+            
         }else {
-            child = root;
+            adJustBalance(p);
+            break;
         }
+         p = p->parent;
     }
 
-    Node *nodeLostBalance = checkBalance(node);
-    if(nodeLostBalance){//失去平衡
-         adJustBalance(nodeLostBalance);
-        //更新高度
-        updateHeight(nodeLostBalance);
-        
+}
+Node * findSuccessor(Node *node){//寻找后继节点
+    if(node->right){//有右字树
+        Node *left = node->right->left;
+        while(left&&left->left){
+            left = left->left;
+        }
+        return left;
+    }else {//没有右子树
+        Node *parent = node->parent;
+        while(parent&&parent->left!=node){
+            parent = node->parent;
+        }
+        return parent;
     }
+ 
+}
+void removeNode(Node*node){
+    if(node->left&&node->right){//是度为2的节点
+        //用它的后继替代它
+        Node *successor = findSuccessor(node);
+        //让后继和其 parent 切断联系
+        if(successor->parent->left==successor){
+            successor->parent->left = NULL;
+        }else {
+            successor->parent->right = NULL;
+        }
+        successor->parent = NULL;
+        
+        if(node->parent){
+            if(node->parent->left == node){
+                node->parent->left = successor;
+            }else {
+                node->parent->right = successor;
+            }
+            successor->parent = node->parent;
+        }
+       
+        successor->left = node->left;
+        node->left->parent = successor;
+        successor->right = node->right;
+        node->right->parent = successor;
+    }else if(node->left||node->right){//是度为1的节点,让唯一的子节点成为自己 parent的子节点
+        Node *child = node->left;
+        if(!child){
+            child = node->right;
+        }
+        if(node->parent){
+            if(node->parent->left==node){
+                node->parent->left = child;
+            }else {
+                node->parent->right = child;
+            }
+            child->parent = node->parent;
+        }
+        
+    }else {//是叶子根节点
+        if(node==root){//也是根节点
+            root = nil;
+        }else {//是叶子节点
+            if(node->parent->left==node){
+                node->parent->left = NULL;
+            }else {
+                node->parent->right = NULL;
+            }
+            
+        }
+    }
+    //切断被删除的节点与原来的树的所有联系
+    Node *parent = node->parent;
+    node->parent = node->left = node->right = NULL;
+    afterRemove(parent);
+}
+void afterRemove(Node *node){
+    Node *p = node;
+    while(p){
+        if(isBalanced(p)){
+            p->height = getHeight(p);
+        }else {
+            adJustBalance(p);
+        }
+        p = p->parent;
+    }
+    
 }
 void updateHeight(Node *node){
     int leftHeight = 0;
@@ -135,6 +234,10 @@ void updateHeight(Node *node){
     if(node->right){
         updateHeight(node->right);
         rightHeight = node->right->height;
+    }
+    if(node->key==3){
+        int key = node->key;
+        
     }
     if(node->left==NULL&&node->right==NULL)
     {
@@ -225,6 +328,9 @@ void rotateRight(Node*node){
     //自己作为原来来的左部下的右部下
     left->right = node;
     node->parent = left;
+    //更新高度
+    node->height = getHeight(node);
+    left->height = getHeight(left);
 }
 /**
 左旋的定义是把右边的部下提升为上级，顶替自己，自己给右边的部下当左部下
@@ -251,8 +357,12 @@ void rotateLeft(Node *node){
     //自己作为原来来的右部下的左部下
     right->left = node;
     node->parent = right;
+    //更新高度
+    node->height = getHeight(node);
+    right->height = getHeight(right);
+    
 }
-Node* checkBalance(Node *node){
+int isBalanced(Node *node){
  
     int leftHeight = 0,rightHeight = 0;
     if(node->left){
@@ -262,21 +372,14 @@ Node* checkBalance(Node *node){
     if(node->right){
         rightHeight = node->right->height;
     }
-    if(abs(leftHeight-rightHeight)>=2){
-        return node;
-    }else {
-        if(node->parent){
-            return  checkBalance(node->parent);
-        }else {
-            return NULL;
-        }
-    }
+    return abs(leftHeight-rightHeight)<2;
 }
 void deleteNode(Node *node){
     
 }
 
 void printNodeInLevel(Node *parent){
+    travelPreOrder(root);
     if(parent==NULL) return;
     LinkNode linkNode = {parent,0,NULL};
     LinkNode *head = &linkNode;
@@ -284,12 +387,8 @@ void printNodeInLevel(Node *parent){
     LinkNode *tail = head;
     int nodeDepth = tail->nodeDepth;
   
-//    int leftBlankSpaceCount = 0;
-//    int maxDistanceAbs = MAX(-leftminDistance, rightMaxDistance);
     int keyWidth = 2;//打印的key 占几个字节
-    if(maxLevel>5){//控制台的长度有限，层数过多会造成强制换行，显示混乱
-        maxLevel = 5;
-    }
+
     int maxDistanceAbs = keyWidth*powl(2, maxLevel);
     int lastBlackSpaceCount = 0;
     while (1) {
@@ -312,10 +411,15 @@ void printNodeInLevel(Node *parent){
             lastBlackSpaceCount = leftBlackSpaceCount;
         }
         int _blankSpaceCountToPrint = blackSpaceCountToPrint;
-        while (blackSpaceCountToPrint--) {
+        while (_blankSpaceCountToPrint--) {
             printf(" ");
         }
-        printf("%d",head->node->key);
+        int key = 0;
+        if(head->node->parent){
+            key = head->node->parent->key;
+        }
+//        printf("%02d{%d}{%d}{%d}",head->node->key,head->node->distanceToRoot,key,lastBlackSpaceCount);
+        printf("%02d",head->node->key);
         if(parent->left){
             LinkNode *newNode = (LinkNode*)calloc(1, sizeof(LinkNode));
             newNode->node = parent->left;
